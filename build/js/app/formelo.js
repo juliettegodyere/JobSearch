@@ -186,7 +186,7 @@ Formelo.prototype.start = function(){
 	var that = this;
 	this.getAppletConfig(this.mAppletID, function(){
 		// Create the first page
-		try {
+		//try {
 			that.buildPages();
 			if (that.mAppletConfig && that.mAppletConfig.pages){
 				that.currentIndex = that.rootPage;
@@ -209,9 +209,9 @@ Formelo.prototype.start = function(){
 			} else {
 				alert('Invalid config '+JSON.stringify(that.mAppletConfig));
 			}
-		} catch (e) {
-			console.error('[Formelo Start] '+e.message+' | Stack '+JSON.stringify(e));
-		}
+		//} catch (e) {
+		//	console.error('[Formelo Start] '+e.message+' | Stack '+JSON.stringify(e));
+		//}
 	});
 };
 
